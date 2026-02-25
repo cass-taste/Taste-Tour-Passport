@@ -62,7 +62,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
         // --- TRACKING SYNC QUEUE ---
         // Replace this URL with the Google Apps Script Web App URL once deployed!
-        const TRACKING_URL = 'https://script.google.com/macros/s/AKfycbwG_Wr2b3obIDpqOgHWRUNDjP2ZAXB9j0Ctg6nu99p-7XRCzPg6ZPwAKIl33MDEIPjJYQ/exec_SCRIPT_URL_HERE';
+        const TRACKING_URL = 'https://script.google.com/macros/s/AKfycbwG_Wr2b3obIDpqOgHWRUNDjP2ZAXB9j0Ctg6nu99p-7XRCzPg6ZPwAKIl33MDEIPjJYQ/exec';
         const syncStorageKey = `sync_queue_${operator.replace(/\s+/g, '_')}`;
 
         const addToSyncQueue = (action, supplierName) => {

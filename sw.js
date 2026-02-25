@@ -1,4 +1,4 @@
-const CACHE_NAME = 'taste-tour-passport-v6';
+const CACHE_NAME = 'taste-tour-passport-v7';
 const ASSETS_TO_CACHE = [
     '/',
     '/index.html',
