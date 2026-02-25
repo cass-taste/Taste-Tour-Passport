@@ -7,6 +7,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     // Check URL parameters
     const urlParams = new URLSearchParams(window.location.search);
     let operator = urlParams.get('operator');
+    let attendeeName = urlParams.get('name') || 'Unknown Attendee'; // From Swapcard
 
     try {
         // Fetch passport data
@@ -46,7 +47,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         }
 
         // We have a valid operator!
-        operatorNameEl.textContent = `Welcome, ${operator}`;
+        operatorNameEl.textContent = `Welcome, ${operator} (${attendeeName})`;
         passportContent.classList.remove('hidden');
 
         const passportData = operators[operator];
@@ -58,6 +59,65 @@ document.addEventListener('DOMContentLoaded', async () => {
         const saveState = () => {
             localStorage.setItem(storageKey, JSON.stringify(savedState));
         };
+
+        // --- TRACKING SYNC QUEUE ---
+        // Replace this URL with the Google Apps Script Web App URL once deployed!
+        const TRACKING_URL = 'YOUR_GOOGLE_SCRIPT_URL_HERE';
+        const syncStorageKey = `sync_queue_${operator.replace(/\s+/g, '_')}`;
+
+        const addToSyncQueue = (action, supplierName) => {
+            let queue = JSON.parse(localStorage.getItem(syncStorageKey) || '[]');
+            queue.push({
+                action: action,
+                company: operator,
+                name: attendeeName,
+                supplier: supplierName,
+                timestamp: new Date().getTime()
+            });
+            localStorage.setItem(syncStorageKey, JSON.stringify(queue));
+            processSyncQueue(); // Attempt to sync immediately
+        };
+
+        const processSyncQueue = async () => {
+            if (TRACKING_URL === 'YOUR_GOOGLE_SCRIPT_URL_HERE') return; // Don't try if not configured
+            if (!navigator.onLine) return; // Don't try if offline
+
+            let queue = JSON.parse(localStorage.getItem(syncStorageKey) || '[]');
+            if (queue.length === 0) return; // Nothing to sync
+
+            const currentItem = queue[0]; // Take the oldest item
+
+            try {
+                // We use GET requests because they are simpler to handle with CORS in basic Apps Script setups
+                const params = new URLSearchParams({
+                    action: currentItem.action,
+                    company: currentItem.company,
+                    name: currentItem.name,
+                    supplier: currentItem.supplier
+                });
+
+                const response = await fetch(`${TRACKING_URL}?${params.toString()}`, {
+                    method: 'GET',
+                    mode: 'no-cors' // We don't need to read the response, just fire and forget
+                });
+
+                // If we get here without a network error throwing, assume success and remove from queue
+                queue.shift();
+                localStorage.setItem(syncStorageKey, JSON.stringify(queue));
+
+                // If there are more items, process them too
+                if (queue.length > 0) {
+                    setTimeout(processSyncQueue, 100);
+                }
+            } catch (err) {
+                console.log("Offline or sync failed, will retry later:", err);
+            }
+        };
+
+        // Attempt to sync on load just in case we have backlog
+        window.addEventListener('online', processSyncQueue);
+        processSyncQueue();
+        // ---------------------------
 
         const renderList = (listId, items, savedItemsKey, progressTextId, progressBarId) => {
             const listEl = document.getElementById(listId);
@@ -90,10 +150,12 @@ document.addEventListener('DOMContentLoaded', async () => {
                     if (li.classList.contains('checked')) {
                         li.classList.remove('checked');
                         savedState[savedItemsKey] = savedState[savedItemsKey].filter(i => i !== item);
+                        addToSyncQueue('uncheck', item);
                     } else {
                         li.classList.add('checked');
                         if (!savedState[savedItemsKey].includes(item)) {
                             savedState[savedItemsKey].push(item);
+                            addToSyncQueue('check', item);
 
                             // Check if this group is now 100% complete
                             if (savedState[savedItemsKey].length === items.length) {
