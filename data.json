@@ -1,0 +1,340 @@
+{
+    "suppliers": [
+        "Avocados From Mexico",
+        "Buddy's Kitchen",
+        "FGF Brands",
+        "Ghirardelli",
+        "Highland Baking",
+        "King's Hawaiian",
+        "Lee Kum Kee",
+        "National Mango Board/Arctic Apples",
+        "Nite Owl Packaging",
+        "Rana Meal Solutions",
+        "Red Gold",
+        "Reser's Fine Foods",
+        "The Mart Group",
+        "The Oregon Fruit Co."
+    ],
+    "operators": {
+        "Subway": {
+            "hit_list": [
+                "Ghirardelli",
+                "King's Hawaiian",
+                "National Mango Board/Arctic Apples",
+                "Red Gold"
+            ],
+            "meeting_list": [
+                "Avocados From Mexico",
+                "Buddy's Kitchen",
+                "FGF Brands",
+                "Highland Baking",
+                "Lee Kum Kee",
+                "Nite Owl Packaging",
+                "Rana Meal Solutions",
+                "Reser's Fine Foods",
+                "The Mart Group",
+                "The Oregon Fruit Co."
+            ]
+        },
+        "Freddy's Frozen Custard": {
+            "hit_list": [
+                "Buddy's Kitchen",
+                "King's Hawaiian",
+                "National Mango Board/Arctic Apples",
+                "Red Gold",
+                "Reser's Fine Foods"
+            ],
+            "meeting_list": [
+                "Avocados From Mexico",
+                "FGF Brands",
+                "Ghirardelli",
+                "Highland Baking",
+                "Lee Kum Kee",
+                "Nite Owl Packaging",
+                "Rana Meal Solutions",
+                "The Mart Group",
+                "The Oregon Fruit Co."
+            ]
+        },
+        "Huddle House": {
+            "hit_list": [
+                "National Mango Board/Arctic Apples",
+                "Nite Owl Packaging",
+                "Rana Meal Solutions",
+                "The Mart Group"
+            ],
+            "meeting_list": [
+                "Avocados From Mexico",
+                "Buddy's Kitchen",
+                "FGF Brands",
+                "Ghirardelli",
+                "Highland Baking",
+                "King's Hawaiian",
+                "Lee Kum Kee",
+                "Red Gold",
+                "Reser's Fine Foods",
+                "The Oregon Fruit Co."
+            ]
+        },
+        "Zaxby's": {
+            "hit_list": [
+                "Avocados From Mexico",
+                "Buddy's Kitchen",
+                "FGF Brands",
+                "King's Hawaiian"
+            ],
+            "meeting_list": [
+                "Ghirardelli",
+                "Highland Baking",
+                "Lee Kum Kee",
+                "National Mango Board/Arctic Apples",
+                "Nite Owl Packaging",
+                "Rana Meal Solutions",
+                "Red Gold",
+                "Reser's Fine Foods",
+                "The Mart Group",
+                "The Oregon Fruit Co."
+            ]
+        },
+        "Qdoba": {
+            "hit_list": [
+                "Avocados From Mexico",
+                "FGF Brands",
+                "Ghirardelli",
+                "Highland Baking",
+                "King's Hawaiian",
+                "Lee Kum Kee",
+                "Red Gold"
+            ],
+            "meeting_list": [
+                "Buddy's Kitchen",
+                "National Mango Board/Arctic Apples",
+                "Nite Owl Packaging",
+                "Rana Meal Solutions",
+                "Reser's Fine Foods",
+                "The Mart Group",
+                "The Oregon Fruit Co."
+            ]
+        },
+        "Just Salad": {
+            "hit_list": [
+                "Avocados From Mexico",
+                "Buddy's Kitchen",
+                "FGF Brands",
+                "Ghirardelli",
+                "Highland Baking",
+                "Rana Meal Solutions",
+                "Red Gold"
+            ],
+            "meeting_list": [
+                "King's Hawaiian",
+                "Lee Kum Kee",
+                "National Mango Board/Arctic Apples",
+                "Nite Owl Packaging",
+                "Reser's Fine Foods",
+                "The Mart Group",
+                "The Oregon Fruit Co."
+            ]
+        },
+        "Regal Cinemas": {
+            "hit_list": [
+                "Avocados From Mexico",
+                "FGF Brands",
+                "Highland Baking",
+                "Lee Kum Kee",
+                "Nite Owl Packaging",
+                "Red Gold",
+                "Reser's Fine Foods"
+            ],
+            "meeting_list": [
+                "Buddy's Kitchen",
+                "Ghirardelli",
+                "King's Hawaiian",
+                "National Mango Board/Arctic Apples",
+                "Rana Meal Solutions",
+                "The Mart Group",
+                "The Oregon Fruit Co."
+            ]
+        },
+        "Shake Shack": {
+            "hit_list": [
+                "Buddy's Kitchen",
+                "FGF Brands",
+                "Ghirardelli",
+                "National Mango Board/Arctic Apples",
+                "The Oregon Fruit Co."
+            ],
+            "meeting_list": [
+                "Avocados From Mexico",
+                "Highland Baking",
+                "King's Hawaiian",
+                "Lee Kum Kee",
+                "Nite Owl Packaging",
+                "Rana Meal Solutions",
+                "Red Gold",
+                "Reser's Fine Foods",
+                "The Mart Group"
+            ]
+        },
+        "Slim Chickens": {
+            "hit_list": [
+                "Buddy's Kitchen",
+                "Ghirardelli",
+                "Rana Meal Solutions",
+                "Reser's Fine Foods",
+                "The Oregon Fruit Co."
+            ],
+            "meeting_list": [
+                "Avocados From Mexico",
+                "FGF Brands",
+                "Highland Baking",
+                "King's Hawaiian",
+                "Lee Kum Kee",
+                "National Mango Board/Arctic Apples",
+                "Nite Owl Packaging",
+                "Red Gold",
+                "The Mart Group"
+            ]
+        },
+        "McLane Fresh": {
+            "hit_list": [
+                "Avocados From Mexico",
+                "King's Hawaiian",
+                "National Mango Board/Arctic Apples",
+                "The Mart Group"
+            ],
+            "meeting_list": [
+                "Buddy's Kitchen",
+                "FGF Brands",
+                "Ghirardelli",
+                "Highland Baking",
+                "Lee Kum Kee",
+                "Nite Owl Packaging",
+                "Rana Meal Solutions",
+                "Red Gold",
+                "Reser's Fine Foods",
+                "The Oregon Fruit Co."
+            ]
+        },
+        "IHOP": {
+            "hit_list": [
+                "Avocados From Mexico",
+                "FGF Brands",
+                "King's Hawaiian",
+                "Lee Kum Kee",
+                "Nite Owl Packaging",
+                "The Oregon Fruit Co."
+            ],
+            "meeting_list": [
+                "Buddy's Kitchen",
+                "Ghirardelli",
+                "Highland Baking",
+                "National Mango Board/Arctic Apples",
+                "Rana Meal Solutions",
+                "Red Gold",
+                "Reser's Fine Foods",
+                "The Mart Group"
+            ]
+        },
+        "Logan's Roadhouse": {
+            "hit_list": [
+                "Highland Baking",
+                "Lee Kum Kee",
+                "Nite Owl Packaging",
+                "Rana Meal Solutions",
+                "Reser's Fine Foods",
+                "The Mart Group",
+                "The Oregon Fruit Co."
+            ],
+            "meeting_list": [
+                "Avocados From Mexico",
+                "Buddy's Kitchen",
+                "FGF Brands",
+                "Ghirardelli",
+                "King's Hawaiian",
+                "National Mango Board/Arctic Apples",
+                "Red Gold"
+            ]
+        },
+        "Tropical Smoothie Cafe": {
+            "hit_list": [
+                "Nite Owl Packaging",
+                "Rana Meal Solutions",
+                "Red Gold",
+                "Reser's Fine Foods",
+                "The Mart Group"
+            ],
+            "meeting_list": [
+                "Avocados From Mexico",
+                "Buddy's Kitchen",
+                "FGF Brands",
+                "Ghirardelli",
+                "Highland Baking",
+                "King's Hawaiian",
+                "Lee Kum Kee",
+                "National Mango Board/Arctic Apples",
+                "The Oregon Fruit Co."
+            ]
+        },
+        "PJ's Coffee (Ballard Brands)": {
+            "hit_list": [
+                "Highland Baking",
+                "Lee Kum Kee",
+                "Rana Meal Solutions",
+                "Reser's Fine Foods",
+                "The Mart Group"
+            ],
+            "meeting_list": [
+                "Avocados From Mexico",
+                "Buddy's Kitchen",
+                "FGF Brands",
+                "Ghirardelli",
+                "King's Hawaiian",
+                "National Mango Board/Arctic Apples",
+                "Nite Owl Packaging",
+                "Red Gold",
+                "The Oregon Fruit Co."
+            ]
+        },
+        "Chili's": {
+            "hit_list": [
+                "Buddy's Kitchen",
+                "Lee Kum Kee",
+                "The Mart Group",
+                "The Oregon Fruit Co."
+            ],
+            "meeting_list": [
+                "Avocados From Mexico",
+                "FGF Brands",
+                "Ghirardelli",
+                "Highland Baking",
+                "King's Hawaiian",
+                "National Mango Board/Arctic Apples",
+                "Nite Owl Packaging",
+                "Rana Meal Solutions",
+                "Red Gold",
+                "Reser's Fine Foods"
+            ]
+        },
+        "Arby's": {
+            "hit_list": [
+                "Ghirardelli",
+                "Highland Baking",
+                "National Mango Board/Arctic Apples",
+                "Nite Owl Packaging",
+                "The Oregon Fruit Co."
+            ],
+            "meeting_list": [
+                "Avocados From Mexico",
+                "Buddy's Kitchen",
+                "FGF Brands",
+                "King's Hawaiian",
+                "Lee Kum Kee",
+                "Rana Meal Solutions",
+                "Red Gold",
+                "Reser's Fine Foods",
+                "The Mart Group"
+            ]
+        }
+    }
+}

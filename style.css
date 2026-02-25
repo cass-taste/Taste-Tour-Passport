@@ -1,0 +1,228 @@
+:root {
+    --bg-color: #f4f6f8;
+    /* Swapcard light background */
+    --card-bg: #ffffff;
+    --border-color: rgba(0, 0, 0, 0.08);
+    --text-primary: #1a1e23;
+    --text-secondary: #5c6b7a;
+    --accent-primary: #ff8a00;
+    --accent-secondary: #ffb800;
+    --accent-tertiary: #ff5e00;
+    --success-bg: rgba(255, 184, 0, 0.08);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-primary);
+    line-height: 1.5;
+    background-image:
+        radial-gradient(circle at top right, rgba(255, 138, 0, 0.05), transparent 40%),
+        radial-gradient(circle at bottom left, rgba(255, 184, 0, 0.05), transparent 40%);
+    min-height: 100vh;
+    padding: 2rem 1rem;
+}
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.header h1 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: var(--accent-tertiary);
+    margin-top: -1.5rem;
+    margin-bottom: 0.25rem;
+    line-height: 1;
+}
+
+.brand-logo {
+    max-width: 220px;
+    height: auto;
+    margin: 0 auto;
+    display: block;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+}
+
+.subtitle {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.group-section {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 16px;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+}
+
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.section-header h2 {
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+
+.progress-text {
+    font-weight: 600;
+    color: var(--accent-primary);
+    background: rgba(255, 138, 0, 0.15);
+    padding: 0.25rem 0.75rem;
+    border-radius: 12px;
+    font-size: 0.875rem;
+}
+
+.progress-bar-container {
+    height: 8px;
+    background: rgba(0, 0, 0, 0.05);
+    border-radius: 4px;
+    margin-bottom: 1.5rem;
+    overflow: hidden;
+}
+
+.progress-bar {
+    height: 100%;
+    width: 0%;
+    border-radius: 4px;
+    transition: width 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.hit-progress {
+    background: linear-gradient(90deg, #ff5e00, #ff8a00);
+}
+
+.meeting-progress {
+    background: linear-gradient(90deg, #ff8a00, #ffb800);
+}
+
+.checklist {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.checklist li {
+    display: flex;
+    align-items: center;
+    padding: 0.75rem 1rem;
+    background: #ffffff;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.02);
+}
+
+.checklist li:hover {
+    border-color: rgba(0, 0, 0, 0.15);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.04);
+}
+
+.checklist li.checked {
+    background: var(--success-bg);
+    border-color: rgba(255, 184, 0, 0.3);
+}
+
+.checklist li.checked .supplier-name {
+    text-decoration: line-through;
+    color: var(--text-secondary);
+    opacity: 0.7;
+}
+
+.checkbox {
+    width: 24px;
+    height: 24px;
+    border: 2px solid rgba(0, 0, 0, 0.2);
+    border-radius: 6px;
+    margin-right: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+    background: #ffffff;
+}
+
+.checklist li.checked .checkbox {
+    background: var(--accent-secondary);
+    border-color: var(--accent-secondary);
+}
+
+.checklist li.checked .checkbox::after {
+    content: '✓';
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.supplier-name {
+    font-size: 1rem;
+    font-weight: 500;
+    transition: all 0.2s ease;
+    user-select: none;
+}
+
+.error-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 16px;
+    padding: 2rem;
+    text-align: center;
+}
+
+.error-card h2 {
+    margin-bottom: 0.5rem;
+}
+
+.error-card p {
+    color: var(--text-secondary);
+    margin-bottom: 1.5rem;
+}
+
+#operator-select {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    background: #ffffff;
+    border: 1px solid var(--border-color);
+    color: var(--text-primary);
+    border-radius: 8px;
+    font-family: inherit;
+    font-size: 1rem;
+    cursor: pointer;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.02);
+}
+
+#operator-select:focus {
+    outline: none;
+    border-color: var(--accent-primary);
+}
+
+#operator-select option {
+    background: var(--bg-color);
+    color: var(--text-primary);
+}

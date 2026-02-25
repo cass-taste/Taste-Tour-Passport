@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Passport</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Inter:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <header class="header">
+            <img src="logo.png" alt="Taste Logo" class="brand-logo">
+            <h1 class="main-title">tour</h1>
+            <p class="subtitle" id="operator-name">Your Digital Passport</p>
+        </header>
+
+        <section id="error-state" class="hidden">
+            <div class="error-card">
+                <h2>Operator Not Found</h2>
+                <p>We couldn't find your passport. Please select your company below:</p>
+                <select id="operator-select">
+                    <option value="" disabled selected>Select your company...</option>
+                </select>
+            </div>
+        </section>
+
+        <div id="passport-content" class="hidden">
+            <section class="group-section" id="hit-list-section">
+                <div class="section-header">
+                    <h2>🎯 Group 1: Hit List (No Meeting)</h2>
+                    <span class="progress-text" id="hit-progress-text">0 / 0</span>
+                </div>
+                <div class="progress-bar-container">
+                    <div class="progress-bar hit-progress" id="hit-progress-bar"></div>
+                </div>
+                <ul class="checklist" id="hit-list">
+                    <!-- Populated by JS -->
+                </ul>
+            </section>
+
+            <section class="group-section" id="meeting-list-section">
+                <div class="section-header">
+                    <h2>🤝 Group 2: Meetings List</h2>
+                    <span class="progress-text" id="meeting-progress-text">0 / 0</span>
+                </div>
+                <div class="progress-bar-container">
+                    <div class="progress-bar meeting-progress" id="meeting-progress-bar"></div>
+                </div>
+                <ul class="checklist" id="meeting-list">
+                    <!-- Populated by JS -->
+                </ul>
+            </section>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>
