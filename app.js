@@ -42,22 +42,6 @@ document.addEventListener('DOMContentLoaded', async () => {
 
         if (!operator || !operators[operator]) {
             errorState.classList.remove('hidden');
-
-            // Debug info for Swapcard testing
-            const debugInfo = document.createElement('div');
-            debugInfo.style.marginTop = '2rem';
-            debugInfo.style.padding = '1rem';
-            debugInfo.style.background = '#ffebee';
-            debugInfo.style.border = '1px solid #ffcdd2';
-            debugInfo.style.borderRadius = '8px';
-            debugInfo.style.fontSize = '0.85rem';
-            debugInfo.innerHTML = `
-                <strong>Debug Info:</strong><br>
-                Raw URL Search: <code>${window.location.search || 'None'}</code><br>
-                Parsed Operator: <code>${operator || 'null'}</code>
-            `;
-            errorState.appendChild(debugInfo);
-
             return;
         }
 
