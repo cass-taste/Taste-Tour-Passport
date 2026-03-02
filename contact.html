@@ -92,17 +92,6 @@
             flex-shrink: 0;
         }
 
-        .phone-number-text {
-            margin-top: 0.1rem;
-            font-size: 1rem;
-            font-weight: 600;
-            color: var(--text-primary);
-            letter-spacing: 0.03em;
-            /* Selectable so user can long-press to call/text on iOS */
-            user-select: text;
-            -webkit-user-select: text;
-        }
-
         .contact-desc {
             text-align: center;
             color: var(--text-secondary);
@@ -110,13 +99,32 @@
             line-height: 1.5;
         }
 
-        .safari-hint {
-            text-align: center;
-            font-size: 0.78rem;
+        .copy-button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.4rem;
+            width: 100%;
+            padding: 0.65rem 1rem;
+            background: transparent;
             color: var(--text-secondary);
-            opacity: 0.7;
-            margin-top: 1.5rem;
-            line-height: 1.5;
+            font-size: 0.85rem;
+            font-weight: 600;
+            border-radius: 10px;
+            border: 1.5px dashed rgba(0, 0, 0, 0.18);
+            cursor: pointer;
+            transition: all 0.2s;
+            -webkit-tap-highlight-color: transparent;
+            font-family: inherit;
+        }
+
+        .copy-button:active {
+            background: rgba(0, 0, 0, 0.04);
+        }
+
+        .copy-button.copied {
+            border-color: #2e9e4f;
+            color: #2e9e4f;
         }
     </style>
 </head>
@@ -148,7 +156,8 @@
                             </svg>
                             Text Ethan
                         </a>
-                        <span class="phone-number-text">(208) 721-1548</span>
+                        <button class="copy-button" onclick="copyNumber(this, '+12087211548', '(208) 721-1548')">📋 Copy
+                            number</button>
                     </div>
 
                     <div class="contact-group">
@@ -166,15 +175,30 @@
                             </svg>
                             Text Cass
                         </a>
-                        <span class="phone-number-text">(706) 302-3422</span>
+                        <button class="copy-button" onclick="copyNumber(this, '+17063023422', '(706) 302-3422')">📋 Copy
+                            number</button>
                     </div>
                 </div>
-
-                <p class="safari-hint">If buttons don't work, long-press the number below each button to call or text,
-                    or open this page in Safari.</p>
             </div>
         </main>
     </div>
+
+    <script>
+        function copyNumber(btn, raw, display) {
+            navigator.clipboard.writeText(raw).then(() => {
+                btn.textContent = '✓ Copied ' + display;
+                btn.classList.add('copied');
+                setTimeout(() => {
+                    btn.textContent = '📋 Copy number';
+                    btn.classList.remove('copied');
+                }, 2000);
+            }).catch(() => {
+                // Fallback for older browsers
+                btn.textContent = display;
+                btn.select && btn.select();
+            });
+        }
+    </script>
 </body>
 
 </html>
