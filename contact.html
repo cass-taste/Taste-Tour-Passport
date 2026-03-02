@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="format-detection" content="telephone=yes">
     <title>Contact Taste Tour</title>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -17,7 +18,7 @@
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            gap: 1.5rem;
+            gap: 2rem;
             margin-top: 2rem;
         }
 
@@ -25,25 +26,16 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            gap: 0.5rem;
+            gap: 0.6rem;
             width: 100%;
             max-width: 300px;
         }
 
-        .phone-button {
-            width: 100%;
-        }
-
-        .text-link {
-            font-size: 0.85rem;
-            color: var(--text-secondary);
-            text-decoration: none;
-            opacity: 0.8;
-        }
-
-        .text-link:hover {
-            opacity: 1;
-            text-decoration: underline;
+        .contact-name {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 0.1rem;
         }
 
         .phone-button {
@@ -51,33 +43,79 @@
             align-items: center;
             justify-content: center;
             gap: 0.75rem;
-            padding: 1.25rem 1.5rem;
+            width: 100%;
+            padding: 1.1rem 1.5rem;
             background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
             color: white;
             text-decoration: none;
-            font-size: 1.25rem;
+            font-size: 1.1rem;
             font-weight: 600;
             border-radius: 16px;
             box-shadow: var(--shadow-md);
             transition: transform 0.2s, box-shadow 0.2s;
             border: none;
             cursor: pointer;
+            -webkit-tap-highlight-color: transparent;
         }
 
         .phone-button:active {
-            transform: scale(0.98);
+            transform: scale(0.97);
+        }
+
+        .sms-button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            width: 100%;
+            padding: 0.85rem 1.5rem;
+            background: transparent;
+            color: var(--accent-primary);
+            text-decoration: none;
+            font-size: 1rem;
+            font-weight: 600;
+            border-radius: 12px;
+            border: 2px solid var(--accent-primary);
+            cursor: pointer;
+            -webkit-tap-highlight-color: transparent;
+            transition: background 0.2s, color 0.2s;
+        }
+
+        .sms-button:active {
+            background: rgba(255, 138, 0, 0.08);
         }
 
         .phone-icon {
-            width: 24px;
-            height: 24px;
+            width: 22px;
+            height: 22px;
             fill: currentColor;
+            flex-shrink: 0;
+        }
+
+        .phone-number-text {
+            margin-top: 0.1rem;
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            letter-spacing: 0.03em;
+            /* Selectable so user can long-press to call/text on iOS */
+            user-select: text;
+            -webkit-user-select: text;
         }
 
         .contact-desc {
             text-align: center;
             color: var(--text-secondary);
             margin-bottom: 1rem;
+            line-height: 1.5;
+        }
+
+        .safari-hint {
+            text-align: center;
+            font-size: 0.78rem;
+            color: var(--text-secondary);
+            opacity: 0.7;
+            margin-top: 1.5rem;
             line-height: 1.5;
         }
     </style>
@@ -92,31 +130,48 @@
 
         <main class="main-content" id="passport-content">
             <div class="card">
-                <p class="contact-desc">Need immediate assistance? Tap a button below to call us directly.</p>
+                <p class="contact-desc">Need immediate assistance? Tap a button below to call or text us.</p>
 
                 <div class="contact-container">
                     <div class="contact-group">
-                        <button class="phone-button" onclick="window.location.href='tel:+12087211548'">
+                        <span class="contact-name">Ethan</span>
+                        <a href="tel:+12087211548" class="phone-button">
                             <svg class="phone-icon" viewBox="0 0 24 24">
                                 <path
-                                    d="M20.01 15.38c-1.23 0-2.42-.2-3.53-.56a.977.977 0 00-1.01.24l-1.57 1.97c-2.83-1.35-5.48-3.9-6.89-6.83l1.95-1.96c.27-.27.35-.67.24-1.02-.37-1.11-.56-2.3-.56-3.53 0-.54-.45-.99-.99-.99H4.19C3.65 2.7 3 3.24 3 3.99 3 13.28 10.73 21 20.03 21c.73 0 1.28-.59 1.28-1.13v-3.49c0-.55-.45-.99-.99-.99zM15 1h6v6h-2V4.41l-5.29 5.3-1.41-1.42L17.59 3H15V1z" />
+                                    d="M20.01 15.38c-1.23 0-2.42-.2-3.53-.56a.977.977 0 00-1.01.24l-1.57 1.97c-2.83-1.35-5.48-3.9-6.89-6.83l1.95-1.96c.27-.27.35-.67.24-1.02-.37-1.11-.56-2.3-.56-3.53 0-.54-.45-.99-.99-.99H4.19C3.65 2.7 3 3.24 3 3.99 3 13.28 10.73 21 20.03 21c.73 0 1.28-.59 1.28-1.13v-3.49c0-.55-.45-.99-.99-.99z" />
                             </svg>
                             Call Ethan
-                        </button>
-                        <a href="sms:+12087211548" class="text-link">Text: (208) 721-1548</a>
+                        </a>
+                        <a href="sms:+12087211548" class="sms-button">
+                            <svg class="phone-icon" viewBox="0 0 24 24">
+                                <path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2z" />
+                            </svg>
+                            Text Ethan
+                        </a>
+                        <span class="phone-number-text">(208) 721-1548</span>
                     </div>
 
                     <div class="contact-group">
-                        <button class="phone-button" onclick="window.location.href='tel:+17063023422'">
+                        <span class="contact-name">Cass</span>
+                        <a href="tel:+17063023422" class="phone-button">
                             <svg class="phone-icon" viewBox="0 0 24 24">
                                 <path
-                                    d="M20.01 15.38c-1.23 0-2.42-.2-3.53-.56a.977.977 0 00-1.01.24l-1.57 1.97c-2.83-1.35-5.48-3.9-6.89-6.83l1.95-1.96c.27-.27.35-.67.24-1.02-.37-1.11-.56-2.3-.56-3.53 0-.54-.45-.99-.99-.99H4.19C3.65 2.7 3 3.24 3 3.99 3 13.28 10.73 21 20.03 21c.73 0 1.28-.59 1.28-1.13v-3.49c0-.55-.45-.99-.99-.99zM15 1h6v6h-2V4.41l-5.29 5.3-1.41-1.42L17.59 3H15V1z" />
+                                    d="M20.01 15.38c-1.23 0-2.42-.2-3.53-.56a.977.977 0 00-1.01.24l-1.57 1.97c-2.83-1.35-5.48-3.9-6.89-6.83l1.95-1.96c.27-.27.35-.67.24-1.02-.37-1.11-.56-2.3-.56-3.53 0-.54-.45-.99-.99-.99H4.19C3.65 2.7 3 3.24 3 3.99 3 13.28 10.73 21 20.03 21c.73 0 1.28-.59 1.28-1.13v-3.49c0-.55-.45-.99-.99-.99z" />
                             </svg>
                             Call Cass
-                        </button>
-                        <a href="sms:+17063023422" class="text-link">Text: (706) 302-3422</a>
+                        </a>
+                        <a href="sms:+17063023422" class="sms-button">
+                            <svg class="phone-icon" viewBox="0 0 24 24">
+                                <path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2z" />
+                            </svg>
+                            Text Cass
+                        </a>
+                        <span class="phone-number-text">(706) 302-3422</span>
                     </div>
                 </div>
+
+                <p class="safari-hint">If buttons don't work, long-press the number below each button to call or text,
+                    or open this page in Safari.</p>
             </div>
         </main>
     </div>
