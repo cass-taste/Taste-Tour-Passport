@@ -120,6 +120,10 @@ document.addEventListener('DOMContentLoaded', async () => {
         // ---------------------------
 
         const renderList = (listId, items, savedItemsKey, progressTextId, progressBarId, startHere) => {
+            // Move the start_here supplier to the top of its list
+            if (startHere && items.includes(startHere)) {
+                items = [startHere, ...items.filter(i => i !== startHere)];
+            }
             const listEl = document.getElementById(listId);
             const textEl = document.getElementById(progressTextId);
             const barEl = document.getElementById(progressBarId);
