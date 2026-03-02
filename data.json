@@ -17,6 +17,7 @@
     ],
     "operators": {
         "Subway": {
+            "start_here": "National Mango Board/Arctic Apples",
             "hit_list": [
                 "Ghirardelli",
                 "King's Hawaiian",
@@ -37,6 +38,7 @@
             ]
         },
         "Freddy's Frozen Custard": {
+            "start_here": "King's Hawaiian",
             "hit_list": [
                 "Buddy's Kitchen",
                 "King's Hawaiian",
@@ -57,6 +59,7 @@
             ]
         },
         "Huddle House": {
+            "start_here": "Nite Owl Packaging",
             "hit_list": [
                 "National Mango Board/Arctic Apples",
                 "Nite Owl Packaging",
@@ -77,6 +80,7 @@
             ]
         },
         "Zaxby's": {
+            "start_here": "Avocados From Mexico",
             "hit_list": [
                 "Avocados From Mexico",
                 "Buddy's Kitchen",
@@ -97,6 +101,7 @@
             ]
         },
         "Qdoba": {
+            "start_here": "King's Hawaiian",
             "hit_list": [
                 "Avocados From Mexico",
                 "FGF Brands",
@@ -117,6 +122,7 @@
             ]
         },
         "Just Salad": {
+            "start_here": "FGF Brands",
             "hit_list": [
                 "Avocados From Mexico",
                 "Buddy's Kitchen",
@@ -137,6 +143,7 @@
             ]
         },
         "Regal Cinemas": {
+            "start_here": "Highland Baking",
             "hit_list": [
                 "Avocados From Mexico",
                 "FGF Brands",
@@ -157,6 +164,7 @@
             ]
         },
         "Shake Shack": {
+            "start_here": "Ghirardelli",
             "hit_list": [
                 "Buddy's Kitchen",
                 "FGF Brands",
@@ -177,6 +185,7 @@
             ]
         },
         "Slim Chickens": {
+            "start_here": "Rana Meal Solutions",
             "hit_list": [
                 "Buddy's Kitchen",
                 "Ghirardelli",
@@ -197,6 +206,7 @@
             ]
         },
         "McLane Fresh": {
+            "start_here": "The Mart Group",
             "hit_list": [
                 "Avocados From Mexico",
                 "King's Hawaiian",
@@ -217,6 +227,7 @@
             ]
         },
         "IHOP": {
+            "start_here": "Lee Kum Kee",
             "hit_list": [
                 "Avocados From Mexico",
                 "FGF Brands",
@@ -237,6 +248,7 @@
             ]
         },
         "Logan's Roadhouse": {
+            "start_here": "The Oregon Fruit Co.",
             "hit_list": [
                 "Highland Baking",
                 "Lee Kum Kee",
@@ -257,6 +269,7 @@
             ]
         },
         "Tropical Smoothie Cafe": {
+            "start_here": "Red Gold",
             "hit_list": [
                 "Nite Owl Packaging",
                 "Rana Meal Solutions",
@@ -277,6 +290,7 @@
             ]
         },
         "PJ's Coffee (Ballard Brands)": {
+            "start_here": "Reser's Fine Foods",
             "hit_list": [
                 "Highland Baking",
                 "Lee Kum Kee",
@@ -297,6 +311,7 @@
             ]
         },
         "Chili's": {
+            "start_here": "Buddy's Kitchen",
             "hit_list": [
                 "Buddy's Kitchen",
                 "Lee Kum Kee",
@@ -317,6 +332,7 @@
             ]
         },
         "Arby's": {
+            "start_here": "Nite Owl Packaging",
             "hit_list": [
                 "Ghirardelli",
                 "Highland Baking",

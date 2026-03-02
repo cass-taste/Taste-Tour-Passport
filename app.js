@@ -119,7 +119,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         processSyncQueue();
         // ---------------------------
 
-        const renderList = (listId, items, savedItemsKey, progressTextId, progressBarId) => {
+        const renderList = (listId, items, savedItemsKey, progressTextId, progressBarId, startHere) => {
             const listEl = document.getElementById(listId);
             const textEl = document.getElementById(progressTextId);
             const barEl = document.getElementById(progressBarId);
@@ -141,9 +141,12 @@ document.addEventListener('DOMContentLoaded', async () => {
                     li.classList.add('checked');
                 }
 
+                const isStartHere = startHere && item === startHere;
+
                 li.innerHTML = `
                     <div class="checkbox"></div>
                     <span class="supplier-name">${item}</span>
+                    ${isStartHere ? '<span class="start-here-badge">🚩 Start Here</span>' : ''}
                 `;
 
                 li.addEventListener('click', () => {
@@ -175,8 +178,8 @@ document.addEventListener('DOMContentLoaded', async () => {
             setTimeout(updateProgress, 100);
         };
 
-        renderList('hit-list', passportData.hit_list, 'hitList', 'hit-progress-text', 'hit-progress-bar');
-        renderList('meeting-list', passportData.meeting_list, 'meetingList', 'meeting-progress-text', 'meeting-progress-bar');
+        renderList('hit-list', passportData.hit_list, 'hitList', 'hit-progress-text', 'hit-progress-bar', passportData.start_here);
+        renderList('meeting-list', passportData.meeting_list, 'meetingList', 'meeting-progress-text', 'meeting-progress-bar', passportData.start_here);
 
     } catch (err) {
         console.error("Error loading passport data:", err);

@@ -21,13 +21,36 @@
             margin-top: 2rem;
         }
 
+        .contact-group {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.5rem;
+            width: 100%;
+            max-width: 300px;
+        }
+
+        .phone-button {
+            width: 100%;
+        }
+
+        .text-link {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            text-decoration: none;
+            opacity: 0.8;
+        }
+
+        .text-link:hover {
+            opacity: 1;
+            text-decoration: underline;
+        }
+
         .phone-button {
             display: flex;
             align-items: center;
             justify-content: center;
             gap: 0.75rem;
-            width: 100%;
-            max-width: 300px;
             padding: 1.25rem 1.5rem;
             background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
             color: white;
@@ -72,23 +95,27 @@
                 <p class="contact-desc">Need immediate assistance? Tap a button below to call us directly.</p>
 
                 <div class="contact-container">
-                    <!-- Replace the href with Ethan's actual phone number -->
-                    <a href="tel:+12087211548" class="phone-button">
-                        <svg class="phone-icon" viewBox="0 0 24 24">
-                            <path
-                                d="M20.01 15.38c-1.23 0-2.42-.2-3.53-.56a.977.977 0 00-1.01.24l-1.57 1.97c-2.83-1.35-5.48-3.9-6.89-6.83l1.95-1.96c.27-.27.35-.67.24-1.02-.37-1.11-.56-2.3-.56-3.53 0-.54-.45-.99-.99-.99H4.19C3.65 2.7 3 3.24 3 3.99 3 13.28 10.73 21 20.03 21c.73 0 1.28-.59 1.28-1.13v-3.49c0-.55-.45-.99-.99-.99zM15 1h6v6h-2V4.41l-5.29 5.3-1.41-1.42L17.59 3H15V1z" />
-                        </svg>
-                        Call Ethan
-                    </a>
+                    <div class="contact-group">
+                        <button class="phone-button" onclick="window.location.href='tel:+12087211548'">
+                            <svg class="phone-icon" viewBox="0 0 24 24">
+                                <path
+                                    d="M20.01 15.38c-1.23 0-2.42-.2-3.53-.56a.977.977 0 00-1.01.24l-1.57 1.97c-2.83-1.35-5.48-3.9-6.89-6.83l1.95-1.96c.27-.27.35-.67.24-1.02-.37-1.11-.56-2.3-.56-3.53 0-.54-.45-.99-.99-.99H4.19C3.65 2.7 3 3.24 3 3.99 3 13.28 10.73 21 20.03 21c.73 0 1.28-.59 1.28-1.13v-3.49c0-.55-.45-.99-.99-.99zM15 1h6v6h-2V4.41l-5.29 5.3-1.41-1.42L17.59 3H15V1z" />
+                            </svg>
+                            Call Ethan
+                        </button>
+                        <a href="sms:+12087211548" class="text-link">Text: (208) 721-1548</a>
+                    </div>
 
-                    <!-- Replace the href with Cass's actual phone number -->
-                    <a href="tel:+17063023422" class="phone-button">
-                        <svg class="phone-icon" viewBox="0 0 24 24">
-                            <path
-                                d="M20.01 15.38c-1.23 0-2.42-.2-3.53-.56a.977.977 0 00-1.01.24l-1.57 1.97c-2.83-1.35-5.48-3.9-6.89-6.83l1.95-1.96c.27-.27.35-.67.24-1.02-.37-1.11-.56-2.3-.56-3.53 0-.54-.45-.99-.99-.99H4.19C3.65 2.7 3 3.24 3 3.99 3 13.28 10.73 21 20.03 21c.73 0 1.28-.59 1.28-1.13v-3.49c0-.55-.45-.99-.99-.99zM15 1h6v6h-2V4.41l-5.29 5.3-1.41-1.42L17.59 3H15V1z" />
-                        </svg>
-                        Call Cass
-                    </a>
+                    <div class="contact-group">
+                        <button class="phone-button" onclick="window.location.href='tel:+17063023422'">
+                            <svg class="phone-icon" viewBox="0 0 24 24">
+                                <path
+                                    d="M20.01 15.38c-1.23 0-2.42-.2-3.53-.56a.977.977 0 00-1.01.24l-1.57 1.97c-2.83-1.35-5.48-3.9-6.89-6.83l1.95-1.96c.27-.27.35-.67.24-1.02-.37-1.11-.56-2.3-.56-3.53 0-.54-.45-.99-.99-.99H4.19C3.65 2.7 3 3.24 3 3.99 3 13.28 10.73 21 20.03 21c.73 0 1.28-.59 1.28-1.13v-3.49c0-.55-.45-.99-.99-.99zM15 1h6v6h-2V4.41l-5.29 5.3-1.41-1.42L17.59 3H15V1z" />
+                            </svg>
+                            Call Cass
+                        </button>
+                        <a href="sms:+17063023422" class="text-link">Text: (706) 302-3422</a>
+                    </div>
                 </div>
             </div>
         </main>
